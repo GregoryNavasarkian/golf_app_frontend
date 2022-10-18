@@ -5,6 +5,140 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	text-align: center;
+}
+
+body {
+	background-color: #f5f5f5;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #cbfcd0;
+	border-radius: 10px;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	padding: 2%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.contact {
+	display: flex;
+	flex-direction: column;
+	background-color: #cbfcd0;
+	border-radius: 10px;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	padding: 2%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.contact form {
+	width: 340px;
+	height: 540px;
+	background: #f5fff5;
+	border-radius: 8px;
+	box-shadow: 0 0 40px -15px rgb(0, 73, 29);
+	padding: 20px 30px;
+	max-width: calc(100vw - 40px);
+	box-sizing: border-box;
+	position: relative;
+}
+
+.contact h2 {
+	margin: 10px 0;
+	padding-bottom: 10px;
+	width: 180px;
+	color: #00341f;
+	border-bottom: 3px solid #00341f;
+}
+
+.contact label {
+	color: #00341f;
+	font-size: 16px;
+	letter-spacing: 1px;
+	line-height: 60px;
+	transition: 0.5s;
+}
+
+.contact input {
+	width: 100%;
+	padding: 5px;
+	box-sizing: border-box;
+	background: none;
+	outline: none;
+	resize: none;
+	border: 0;
+	font-family: 'Montserrat', sans-serif;
+	transition: all .3s;
+	border-bottom: 2px solid #bebed2;
+}
+
+.contact textarea {
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	background: none;
+	outline: none;
+	resize: none;
+	border: 1px solid #bebed2;
+	border-radius: 5px;
+	font-family: 'Montserrat', sans-serif;
+	transition: all .3s;
+	border-bottom: 2px solid #bebed2;
+}
+
+.contact input:focus {
+	border-bottom: 2px solid #00341f;
+}
+
+.contact textarea:focus {
+	border: 2px solid #00341f;
+}
+
+.contact button {
+	float: right;
+	padding: 8px 15px;
+	font-size: 12pt;
+	margin: 8px 0 0;
+	border: 2px solid #78788c;
+	border-radius: 5px;
+	background: 0;
+	color: #5a5a6e;
+	cursor: pointer;
+	transition: all .3s;
+}
+
+button:hover {
+	background: #00341fa4;
+	color: #fff;
+}
+
+.about p {
+	padding: 10px;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+	border: 1px solid #00341f;
+	text-align: left;
+	width: 100%;
+	padding: 10px;
+}
+
+thead th {
+	padding: 10px;
+	border: 1px solid #00341f;
+}
+
+tbody td {
+	padding: 10px;
+	border: 1px solid #00341f;
 }
 
 footer {

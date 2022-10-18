@@ -10,17 +10,14 @@ const Navbar = () => {
 			</NavLink>
 			<Bars />
 			<NavMenu>
+				<NavLink to='/find-courses' activeStyle>
+					Course Finder
+				</NavLink>
 				<NavLink to='/about' activeStyle>
 					About
 				</NavLink>
-				<NavLink to='/services' activeStyle>
-					Services
-				</NavLink>
 				<NavLink to='/contact' activeStyle>
 					Contact Us
-				</NavLink>
-				<NavLink to='/sign-up' activeStyle>
-					Sign Up
 				</NavLink>
 				<NavBtn>
 					<NavBtnLink to='/sign-in'>Sign In</NavBtnLink>

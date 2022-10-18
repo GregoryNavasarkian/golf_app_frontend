@@ -2,7 +2,14 @@ import React from 'react'
 
 const AboutPage = () => {
   return (
-	<h1>About Page</h1>
+	<div className='about'>
+		<h1>About</h1>
+		<span className='aboutText'>
+			<p>Find Golf Courses, Enter Scores, and view PGA standings. </p>
+			<p>Created by Gregory Navasarkian</p>
+		</span>
+	</div>
+
   )
 }
 

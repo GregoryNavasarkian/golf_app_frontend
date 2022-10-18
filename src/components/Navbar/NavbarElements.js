@@ -19,7 +19,9 @@ export const NavLink = styled(Link)`
 	padding: 0 1rem;
 	height: 100%;
 	cursor: pointer;
-
+&.hover{
+	font-weight: bolder;
+}
 &.active {
 	color: #5c9037;
 }
