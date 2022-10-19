@@ -22,7 +22,7 @@ function DisplayCoursesTable( {lat, lng} ) {
 		.catch(function (error) {
 			console.error(error);
 		});
-	}, []);
+	});
 
 
 	if (courses) {
