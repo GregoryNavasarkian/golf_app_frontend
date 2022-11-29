@@ -13,6 +13,9 @@ const Navbar = () => {
 				<NavLink to='/find-courses' activeStyle>
 					Course Finder
 				</NavLink>
+				<NavLink to='/rankings' activeStyle>
+					PGA Rankings
+				</NavLink>
 				<NavLink to='/about' activeStyle>
 					About
 				</NavLink>

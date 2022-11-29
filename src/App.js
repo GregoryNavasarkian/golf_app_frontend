@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import FindCoursesPage from './pages/FindCoursesPage';
+import RankingsPage from './pages/RankingsPage';
 
 import './App.css';
 import Navbar from './components/Navbar';
@@ -18,6 +19,7 @@ function App() {
 				<Route path='/about' element={<AboutPage/>}/>
 				<Route path='/contact' element={<ContactPage/>}/>
 				<Route path='/find-courses' element={<FindCoursesPage/>}/>
+				<Route path='/rankings' element={<RankingsPage/>}/>
 			</Routes>
 		</main>
 		

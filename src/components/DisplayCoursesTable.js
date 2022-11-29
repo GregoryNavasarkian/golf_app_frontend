@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 
 function DisplayCoursesTable( {lat, lng} ) {
-	const [courses, setCourses] = useState(null);
+	const [courses, setCourses] = useState([]);
 
 	const options = {
         method: 'GET',
@@ -15,14 +15,18 @@ function DisplayCoursesTable( {lat, lng} ) {
       };
 
 	useEffect(() => {
+		let mounted = true;
 		axios.request(options)
 		.then( res => {
-			setCourses(res.data.courses);
+			if(mounted) {
+				setCourses(res.data.courses);
+			}
 		})
 		.catch(function (error) {
 			console.error(error);
 		});
-	});
+		return () => mounted = false;
+	}, [lat, lng]);
 
 
 	if (courses) {

@@ -3,15 +3,17 @@ import DisplayCoursesTable from '../components/DisplayCoursesTable';
 
 function FindCoursesPage() {
 
-    const[lat, setLat] = React.useState('34.22977');
-    const[lng, setLng] = React.useState('-118.09723');
+    const[lat, setLat] = React.useState('');
+    const[lng, setLng] = React.useState('');
+	const[isShowTable, setIsShowTable] = React.useState(false);
 
 
     function buttonClick() {
-        return(< DisplayCoursesTable lat={lat} lng={lng} />);
+        setIsShowTable(true);
     }
 
-    
+    //lng = -118.09723
+	//lat = 34.22977
     return (
         <>
         <div>
@@ -19,9 +21,6 @@ function FindCoursesPage() {
             <br></br>
             <p>Enter your location to find nearby golf courses.</p>
             <br></br>
-
-
-            {/* <button onClick={buttonClick}>Get Course</button> */}
         </div>
         <form>
             <label>
@@ -29,12 +28,11 @@ function FindCoursesPage() {
             <input type="text" name="lat" value={lat} onChange={e => setLat(e.target.value)} />
             <label>
                 &nbsp;Longitude:</label>
-            <input type="text" name="lat" value={lat} onChange={e => setLat(e.target.value)} />
-            
+            <input type="text" name="lat" value={lng} onChange={e => setLng(e.target.value)} />
         </form>
         <br></br><button onClick={buttonClick}>Search</button>
         <br></br>
-        <DisplayCoursesTable lat={lat} lng={lng}/>
+        {isShowTable && <DisplayCoursesTable lat={lat} lng={lng}/>}
         </>
     );
 }
