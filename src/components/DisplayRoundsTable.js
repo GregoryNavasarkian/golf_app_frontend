@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import { CSVLink } from 'react-csv';
 import axios from 'axios';
 
 function DisplayRoundsTable() {
@@ -21,8 +22,10 @@ function DisplayRoundsTable() {
 		.catch(function (error) {
 			console.error(error);
 		});
+		
 		return () => mounted = false;
 	}, []);
+
 
 	return (
 		<>
@@ -50,6 +53,10 @@ function DisplayRoundsTable() {
 				</tbody>
 			</table>
 		</div>
+		<br />
+		<CSVLink data={rounds}>
+			<button>Export Data</button>
+		</CSVLink>
 		</>
 	);
 }

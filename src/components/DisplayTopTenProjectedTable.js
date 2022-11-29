@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import { CSVLink } from 'react-csv';
 import axios from 'axios';
 
 function DisplayTopTenProjectedTable() {
@@ -48,6 +49,10 @@ function DisplayTopTenProjectedTable() {
 					</tbody>
 				</table>
 			</div>
+			<br />
+		<CSVLink data={projectedTopTen}>
+			<button>Export Data</button>
+		</CSVLink>
 			</>
 		);
 	}

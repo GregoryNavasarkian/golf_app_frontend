@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import { CSVLink } from 'react-csv';
 import axios from 'axios';
 
 function DisplayAllToursTable() {
@@ -44,6 +45,10 @@ function DisplayAllToursTable() {
 					</tbody>
 				</table>
 			</div>
+			<br />
+		<CSVLink data={allTours}>
+			<button>Export Data</button>
+		</CSVLink>
 			</>
 		);
 	}
