@@ -114,8 +114,23 @@ main {
 }
 
 button:hover {
+	background: #00804da4;
+	color: #fff;
+	cursor: pointer;
+}
+
+button {
 	background: #00341fa4;
 	color: #fff;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.tableButton {
+	background: #00341fa4;
+	color: #fff;
+	padding: 5px;
+	border-radius: 5px;
 }
 
 .about p {

@@ -23,7 +23,7 @@ const Navbar = () => {
 					Contact Us
 				</NavLink>
 				<NavBtn>
-					<NavBtnLink to='/sign-in'>Sign In</NavBtnLink>
+					<NavBtnLink to='/add-round'>Add Round</NavBtnLink>
 				</NavBtn>
 			</NavMenu>
 		</Nav>

@@ -7,7 +7,7 @@ function DisplayCoursesTable( {lat, lng} ) {
 	const options = {
         method: 'GET',
         url: 'https://golf-course-finder.p.rapidapi.com/courses',
-        params: {radius: '10', lat: lat, lng: lng},
+        params: {radius: '15', lat: lat, lng: lng},
         headers: {
           'X-RapidAPI-Key': 'cfe41879c5msh3ac43794f053255p1327ecjsn0aa5e3a5f2c1',
           'X-RapidAPI-Host': 'golf-course-finder.p.rapidapi.com'

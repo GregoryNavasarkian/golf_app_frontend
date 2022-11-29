@@ -12,7 +12,8 @@ const HomePage = () => {
 		<br></br>
 		<br></br>
 		<h2>New Features: </h2> <br></br>
-		<p>Click on 'Find Courses' to search for a golf course in your area.</p><br></br>
+		<p>Click on 'Course Finder' to search for a golf course in your area.</p>
+		<p> Click on 'Add Round' to add a new golf round.</p><br></br>
 	</div>
   );
 }

@@ -1,19 +1,31 @@
 import React from 'react';
 import DisplayCoursesTable from '../components/DisplayCoursesTable';
+import Geocode from "react-geocode";
+Geocode.setLanguage("en");
 
 function FindCoursesPage() {
 
-    const[lat, setLat] = React.useState('');
-    const[lng, setLng] = React.useState('');
+    const[lat, setLat] = React.useState('34.22977');
+    const[lng, setLng] = React.useState('-118.09723');
+	const[zipCode, setZipCode] = React.useState('91208');
 	const[isShowTable, setIsShowTable] = React.useState(false);
 
 
     function buttonClick() {
+		Geocode.fromAddress().then(
+			response => {
+				const { lat, lng } = response.results[0].geometry.location;
+				console.log(lat, lng);
+				setLat(lat);
+				setLng(lng);
+			},
+			error => {
+				console.error(error);
+			}
+		);
         setIsShowTable(true);
     }
 
-    //lng = -118.09723
-	//lat = 34.22977
     return (
         <>
         <div>
@@ -24,11 +36,8 @@ function FindCoursesPage() {
         </div>
         <form>
             <label>
-                Latitude:</label>
-            <input type="text" name="lat" value={lat} onChange={e => setLat(e.target.value)} />
-            <label>
-                &nbsp;Longitude:</label>
-            <input type="text" name="lat" value={lng} onChange={e => setLng(e.target.value)} />
+                ZipCode: </label>
+            <input type="text" name="zip" value={zipCode} onChange={e => setZipCode(e.target.value)} />
         </form>
         <br></br><button onClick={buttonClick}>Search</button>
         <br></br>
